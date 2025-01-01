@@ -28,7 +28,7 @@ const Contact = () => {
 
             </div>
             <div className={styles.CopyrightContainer}>
-                <div className={styles.Copyright}>&copy; 2024 Rhamsez Thevenin</div>
+                <div className={styles.Copyright}>&copy; 2025 Rhamsez Thevenin</div>
             </div>
         </div>
     )
