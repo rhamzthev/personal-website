@@ -7,15 +7,15 @@ import Panel from "./Panel";
 const exps = [
   {
     title: "Rhed",
-    date: "Aug. 2024 - Present",
+    date: "Dev. 2024 - Present",
     content:
       "I'm currently building my personal brand, and this is one of the artifacts that came with it. I will be live streaming myself doing all things tech.",
     image: "/projects/rhed.jpg",
     link: "https://rhed.rhamzthev.com/",
   },
   {
-    title: "Terre Website (Inactive)",
-    date: "Aug. 2024 - Present",
+    title: "Terre Website",
+    date: "Aug. 2024 - Sep. 2024",
     content:
       "I have this idea of creating an Earth with a timeline, and based on the time and day you go to, It will show all major occuring events during that time. This is what I want Terre to be. This is a WIP.",
     image: "/projects/terre.jpg",
