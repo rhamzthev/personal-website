@@ -69,7 +69,7 @@ export default function Home() {
         <div className="text-center text-white space-y-8 flex flex-col items-center justify-center">
           <h1 className="text-4xl">Rhamsez Thevenin</h1>
 
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
             <a
               href="/resume"
               target="_blank"
@@ -103,6 +103,13 @@ export default function Home() {
               title="Email"
             >
               <Email className="w-8 h-8" />
+            </a>
+            <a
+              href="https://rhed.rhamzthev.com"
+              className="transition-all hover:scale-110 hover:text-[#a00]"
+              title="Rhed"
+            >
+              <span className="font-playwrite text-[2rem]">R</span>
             </a>
           </div>
         </div>
