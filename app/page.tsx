@@ -57,7 +57,7 @@ const Resume = (props: SVGProps<SVGSVGElement>) => (
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full bg-black">
+    <main className="relative min-h-screen w-full">
       <Image
         src="/background.jpg"
         alt="Background"
