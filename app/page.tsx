@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, SVGProps } from "react";
+import { SVGProps } from "react";
 
 const Email = (props: SVGProps<SVGSVGElement>) => (
   <svg
