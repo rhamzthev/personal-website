@@ -56,12 +56,6 @@ const Resume = (props: SVGProps<SVGSVGElement>) => (
 );
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
     <main className="relative min-h-screen w-full">
       <Image
