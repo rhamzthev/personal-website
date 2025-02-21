@@ -114,7 +114,7 @@ export default function Home() {
                         className="transition-all hover:scale-110 text-[#777] hover:text-[#700]"
                         title="Rhed"
                     >
-                        <span className={`font-playwrite text-[${iconSize}]`}>R</span>
+                        <span className="font-playwrite text-[4vw]">R</span>
                     </a>
                 </div>
             </div>
