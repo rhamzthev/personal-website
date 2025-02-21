@@ -1,7 +1,8 @@
 import './globals.css'
-import { Roboto_Serif } from 'next/font/google'
+import { Roboto_Serif, Roboto_Flex } from 'next/font/google'
 
-const robotoSerif = Roboto_Serif({ subsets: ['latin'] })
+const robotoSerif = Roboto_Serif({ subsets: ['latin'] });
+const robotoSans = Roboto_Flex({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Rhamsez Thevenin',
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen ${robotoSerif.className} bg-black`}>
+      <body className={`min-h-screen ${robotoSans.className} ${robotoSerif.className} bg-black`}>
         {children}
       </body>
     </html>
