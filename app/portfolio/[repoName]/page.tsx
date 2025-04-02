@@ -14,7 +14,7 @@ export async function generateMetadata({
 
     try {
 
-        const { repoName } = await params;
+        const { repoName } = params;
 
         const repos = await getGithubRepos(username);
         const repo = repos.find(r => r.name === repoName);
@@ -41,7 +41,7 @@ export async function generateMetadata({
 export default async function RepoPage({ params }: { params: { repoName: string } }) {
     const username = 'rhamzthev';
 
-    const { repoName } = await params;
+    const { repoName } = params;
 
     try {
         const repos = await getGithubRepos(username);
