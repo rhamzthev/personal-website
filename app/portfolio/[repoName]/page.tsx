@@ -5,11 +5,12 @@ import { notFound } from 'next/navigation';
 import { FaGithub, FaExternalLinkAlt, FaStar, FaEye, FaCalendar, FaMarkdown } from 'react-icons/fa';
 import 'highlight.js/styles/atom-one-dark.css'; // Using a dark theme to match your site
 
-export async function generateMetadata({
-    params
-}: {
-    params: { repoName: string }
-}) {
+export async function generateMetadata(
+    props: {
+        params: Promise<{ repoName: string }>
+    }
+) {
+    const params = await props.params;
     const username = 'rhamzthev';
 
     try {
@@ -37,7 +38,8 @@ export async function generateMetadata({
     }
 }
 
-export default async function RepoPage({ params }: { params: { repoName: string } }) {
+export default async function RepoPage(props: { params: Promise<{ repoName: string }> }) {
+    const params = await props.params;
     const username = 'rhamzthev';
 
 
