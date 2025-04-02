@@ -374,6 +374,68 @@
   .custom-readme .overflow-auto {
     overflow: auto;
   }
+
+  /* GitHub-style video embeds */
+  .custom-readme details {
+    @apply my-6 rounded-lg overflow-hidden border border-gray-800 bg-gray-900 transition-all duration-300;
+  }
+
+  .custom-readme details:hover {
+    @apply border-gray-700 shadow-md;
+  }
+
+  .custom-readme details summary {
+    @apply flex items-center px-4 py-3 bg-gray-900 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300;
+  }
+
+  .custom-readme details summary svg {
+    @apply text-primary-light mr-2;
+  }
+
+  .custom-readme details summary span.m-1 {
+    @apply ml-2 font-medium;
+  }
+
+  .custom-readme details summary::-webkit-details-marker {
+    @apply hidden;
+  }
+
+  .custom-readme details summary .dropdown-caret {
+    @apply ml-auto border-4 border-transparent border-t-gray-400;
+    width: 0;
+    height: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .custom-readme details[open] summary .dropdown-caret {
+    @apply -rotate-180;
+  }
+
+  .custom-readme details video {
+    @apply w-full border-t border-gray-800 bg-black;
+    max-height: 500px;
+  }
+
+  .custom-readme details[open] video {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .custom-readme .width-fit {
+    @apply w-full;
+  }
+
+  /* Optional enhanced video controls */
+  .custom-readme video::-webkit-media-controls {
+    @apply bg-gradient-to-t from-black/80 to-transparent;
+  }
+
+  .custom-readme video::-webkit-media-controls-panel {
+    @apply bg-transparent;
+  }
+
+  .custom-readme video::-webkit-media-controls-play-button {
+    @apply text-primary-light;
+  }
 }
 
 /* Custom animations */
