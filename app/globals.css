@@ -3,3 +3,451 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #F5F5F5;
+  --primary: #e11d48; /* Red-600 */
+  --primary-dark: #be123c; /* Red-700 */
+  --primary-light: #f43f5e; /* Red-500 */
+}
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #030712; /* Gray-950 */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    font-family: 'Roboto Serif', serif;
+  }
+  
+  p, span, a, button {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply py-2 px-4 rounded transition-all duration-300 font-medium;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white font-medium rounded-lg shadow-md hover:shadow-glow-sm hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-transparent border border-gray-700 text-white font-medium rounded-lg hover:border-red-500 hover:shadow-glow-sm hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-tertiary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:text-red-500 transition-all duration-300;
+  }
+  
+  .btn-nav-special {
+    @apply inline-flex items-center text-sm px-4 py-1.5 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-800 text-gray-200 hover:text-white hover:border-red-500/50 hover:shadow-glow-xs transition-all duration-300;
+  }
+  
+  .social-link {
+    @apply flex items-center justify-center w-10 h-10 rounded-full bg-gray-900/60 text-gray-400 hover:text-red-500 hover:-translate-y-1 transition-all duration-300;
+  }
+  
+  .section {
+    @apply py-12 md:py-20;
+  }
+
+  /* Glassmorphism cards */
+  .glass-card {
+    @apply bg-gray-900/40 backdrop-blur-lg border border-gray-800/50 rounded-xl shadow-lg transition-all;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-morphism {
+    @apply backdrop-blur-sm bg-gray-900/60;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-input {
+    @apply bg-white/5 border border-white/10 rounded-md shadow-inner text-white py-2 px-4 focus:outline-none focus:border-red-500/50 transition-all duration-300;
+  }
+  
+  /* Neumorphic elements */
+  .neomorphic-icon {
+    @apply flex items-center justify-center w-12 h-12 rounded-xl shadow-neomorph transition-all;
+  }
+  
+  .neomorphic-icon-sm {
+    @apply flex items-center justify-center w-9 h-9 rounded-lg shadow-neomorph transition-all;
+  }
+  
+  .neomorphic-input {
+    @apply bg-gray-900 border border-gray-800/50 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-red-500/50 transition-all;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3), inset -3px -3px 7px rgba(255, 255, 255, 0.04);
+  }
+  
+  /* Shadow effects */
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
+  }
+  
+  .shadow-glow-sm {
+    box-shadow: 0 0 15px -3px rgba(239, 68, 68, 0.2), 0 0 6px -2px rgba(239, 68, 68, 0.1);
+  }
+  
+  .shadow-glow-xs {
+    box-shadow: 0 0 5px rgba(225, 29, 72, 0.2);
+  }
+  
+  .shadow-neomorph {
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), -2px -2px 1px rgba(255, 255, 255, 0.04);
+  }
+
+  /* Custom README styling */
+  .custom-readme {
+    @apply text-gray-200 leading-relaxed;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Headings */
+  .custom-readme h1 {
+    @apply text-4xl font-bold text-white mb-8 font-serif relative pb-4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .custom-readme h1::after {
+    content: '';
+    @apply block absolute bottom-0 left-0 w-24 h-1 bg-gradient-to-r from-primary to-primary-light rounded;
+  }
+
+  .custom-readme h2 {
+    @apply text-2xl font-bold text-white mt-8 mb-4 font-serif relative pb-3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .custom-readme h3 {
+    @apply text-xl font-bold text-gray-100 mt-6 mb-3 font-serif;
+  }
+
+  .custom-readme h4 {
+    @apply text-lg font-semibold text-gray-100 mt-5 mb-2;
+  }
+
+  /* Paragraphs and text */
+  .custom-readme p {
+    @apply mb-6 text-base text-gray-300;
+    line-height: 1.7;
+  }
+
+  /* Lists */
+  .custom-readme ul,
+  .custom-readme ol {
+    @apply mb-6 pl-6 text-gray-300;
+  }
+
+  .custom-readme ul {
+    list-style-type: none;
+    @apply space-y-2;
+  }
+
+  .custom-readme ul li {
+    @apply relative pl-6;
+  }
+
+  .custom-readme ul li::before {
+    content: '';
+    @apply absolute left-0 top-2.5 w-3 h-3 bg-primary/30 border border-primary/50 rounded-sm transform rotate-45;
+  }
+
+  .custom-readme ol {
+    @apply list-decimal space-y-2;
+  }
+
+  .custom-readme ol li {
+    @apply pl-2;
+  }
+
+  /* Links */
+  .custom-readme a {
+    @apply text-primary font-medium relative inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background-image: linear-gradient(transparent 70%, rgba(var(--primary-color-rgb), 0.2) 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+  }
+
+  .custom-readme a:hover {
+    @apply text-primary-light;
+    background-size: 100% 100%;
+  }
+
+  /* Code blocks */
+  .custom-readme pre {
+    @apply my-6 p-4 rounded-lg bg-gray-950 border border-gray-800 overflow-x-auto;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .custom-readme pre code {
+    @apply font-mono text-sm p-0 bg-transparent border-0 text-gray-300;
+    line-height: 1.6;
+  }
+
+  /* Inline code */
+  .custom-readme code {
+    @apply font-mono text-sm px-1.5 py-0.5 rounded bg-gray-800/70 border border-gray-700/50 text-gray-200;
+  }
+
+  /* Blockquotes */
+  .custom-readme blockquote {
+    @apply my-6 pl-4 py-1 border-l-4 border-primary/50 bg-primary/5 rounded-r-lg;
+  }
+
+  .custom-readme blockquote p {
+    @apply text-gray-300 italic mb-0 py-2;
+  }
+
+  /* Tables */
+  .custom-readme table {
+    @apply w-full my-6 border-collapse rounded-lg overflow-hidden;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-readme table thead {
+    @apply bg-gray-800;
+  }
+
+  .custom-readme table th {
+    @apply py-3 px-4 text-left text-gray-200 font-semibold border-b border-gray-700;
+  }
+
+  .custom-readme table tbody tr {
+    @apply bg-gray-900 hover:bg-gray-800 transition-colors duration-150;
+  }
+
+  .custom-readme table td {
+    @apply py-3 px-4 border-t border-gray-800 text-gray-300;
+  }
+
+  /* Images */
+  .custom-readme img {
+    @apply rounded-lg my-6 shadow-lg max-w-full h-auto;
+    transition: transform 0.3s ease;
+  }
+
+  .custom-readme img:hover {
+    transform: scale(1.01);
+  }
+
+  /* Horizontal rule */
+  .custom-readme hr {
+    @apply my-8 border-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent;
+  }
+
+  /* Animation for content sections on scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .custom-readme h2,
+    .custom-readme pre,
+    .custom-readme img,
+    .custom-readme table {
+      animation: fadeIn 0.5s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  /* Code syntax highlighting enhancements */
+  .custom-readme pre code .hljs-keyword,
+  .custom-readme pre code .hljs-title.function_ {
+    @apply text-blue-400 font-normal; /* keywords - softer blue (#569CD6) */
+  }
+
+  .custom-readme pre code .hljs-string {
+    @apply text-amber-300; /* strings - warmer tone (#CE9178) */
+  }
+
+  .custom-readme pre code .hljs-title,
+  .custom-readme pre code .hljs-title.class_ {
+    @apply text-teal-300 font-normal; /* class names - teal (#4EC9B0) */
+  }
+
+  .custom-readme pre code .hljs-comment {
+    @apply text-green-600 not-italic; /* comments - muted green (#6A9955) */
+  }
+
+  .custom-readme pre code .hljs-variable,
+  .custom-readme pre code .hljs-attr {
+    @apply text-cyan-300; /* variables - light blue (#9CDCFE) */
+  }
+  
+  .custom-readme pre code .hljs-number {
+    @apply text-lime-200; /* numbers - light green (#B5CEA8) */
+  }
+  
+  .custom-readme pre code .hljs-built_in {
+    @apply text-yellow-200; /* built-ins - light yellow (#DCDCAA) */
+  }
+  
+  .custom-readme pre code .hljs-type,
+  .custom-readme pre code .hljs-literal,
+  .custom-readme pre code .hljs-params {
+    @apply text-teal-300; /* types - teal (#4EC9B0) */
+  }
+  
+  .custom-readme pre code .hljs-meta {
+    @apply text-gray-400;
+  }
+
+  /* GitHub-specific syntax highlighting */
+  .custom-readme .highlight {
+    @apply my-6 p-4 rounded-lg bg-gray-950 border border-gray-800 overflow-x-auto;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .custom-readme .highlight pre {
+    @apply my-0 p-0 border-0 shadow-none bg-transparent;
+  }
+
+  .custom-readme .highlight pre span {
+    @apply font-mono
+  }
+
+  /* GitHub syntax tokens - VS Code Dark Modern inspired */
+  .custom-readme .pl-k {
+    @apply text-blue-400 font-normal; /* keywords - softer blue */
+  }
+  
+  .custom-readme .pl-s, 
+  .custom-readme .pl-s1 {
+    @apply text-amber-300; /* strings - warmer tone */
+  }
+  
+  .custom-readme .pl-c1 {
+    @apply text-lime-200; /* constants/numbers - light green */
+  }
+  
+  .custom-readme .pl-en {
+    @apply text-yellow-200 font-normal; /* entity names/functions - light yellow */
+  }
+  
+  .custom-readme .pl-c {
+    @apply text-green-600 not-italic; /* comments - muted green */
+  }
+  
+  .custom-readme .pl-smi {
+    @apply text-cyan-300; /* special identifiers - light blue */
+  }
+  
+  .custom-readme .pl-kos {
+    @apply text-gray-300; /* punctuation - lighter gray */
+  }
+  
+  .custom-readme .pl-v {
+    @apply text-cyan-300; /* variables - light blue */
+  }
+
+  .custom-readme .pl-e {
+    @apply text-teal-300; /* entities - teal */
+  }
+  
+  /* Position handling for code copy button */
+  .custom-readme .position-relative {
+    position: relative;
+  }
+  
+  .custom-readme .overflow-auto {
+    overflow: auto;
+  }
+}
+
+/* Custom animations */
+@keyframes slow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slow-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes centered-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 8s ease-in-out infinite;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 40s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s forwards;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fade-in 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fade-in 0.8s forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fade-in 0.8s forwards;
+  animation-delay: 0.6s;
+}
+
+.animate-fade-in-delay-4 {
+  opacity: 0;
+  animation: fade-in 0.8s forwards;
+  animation-delay: 0.8s;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in 0.8s forwards;
+}
+
+.animate-centered-bounce {
+  animation: centered-bounce 1s infinite;
+}
