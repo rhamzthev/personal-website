@@ -272,46 +272,46 @@
     }
   }
 
-  /* Code syntax highlighting enhancements */
+  /* Code syntax highlighting with greyscale and monochromatic reds */
   .custom-readme pre code .hljs-keyword,
   .custom-readme pre code .hljs-title.function_ {
-    @apply text-blue-400 font-normal; /* keywords - softer blue (#569CD6) */
+    @apply text-gray-300 font-normal; /* keywords - light gray */
   }
 
   .custom-readme pre code .hljs-string {
-    @apply text-amber-300; /* strings - warmer tone (#CE9178) */
+    @apply text-red-400; /* strings - medium red */
   }
 
   .custom-readme pre code .hljs-title,
   .custom-readme pre code .hljs-title.class_ {
-    @apply text-teal-300 font-normal; /* class names - teal (#4EC9B0) */
+    @apply text-white font-normal; /* class names - white */
   }
 
   .custom-readme pre code .hljs-comment {
-    @apply text-green-600 not-italic; /* comments - muted green (#6A9955) */
+    @apply text-gray-500 not-italic; /* comments - medium gray */
   }
 
   .custom-readme pre code .hljs-variable,
   .custom-readme pre code .hljs-attr {
-    @apply text-cyan-300; /* variables - light blue (#9CDCFE) */
+    @apply text-gray-400; /* variables - lighter gray */
   }
   
   .custom-readme pre code .hljs-number {
-    @apply text-lime-200; /* numbers - light green (#B5CEA8) */
+    @apply text-red-300; /* numbers - lighter red */
   }
   
   .custom-readme pre code .hljs-built_in {
-    @apply text-yellow-200; /* built-ins - light yellow (#DCDCAA) */
+    @apply text-gray-200; /* built-ins - very light gray */
   }
   
   .custom-readme pre code .hljs-type,
   .custom-readme pre code .hljs-literal,
   .custom-readme pre code .hljs-params {
-    @apply text-teal-300; /* types - teal (#4EC9B0) */
+    @apply text-red-200; /* types - very light red */
   }
   
   .custom-readme pre code .hljs-meta {
-    @apply text-gray-400;
+    @apply text-gray-600;
   }
 
   /* GitHub-specific syntax highlighting */
@@ -328,42 +328,42 @@
     @apply font-mono
   }
 
-  /* GitHub syntax tokens - VS Code Dark Modern inspired */
+  /* GitHub syntax tokens - greyscale and red theme */
   .custom-readme .pl-k {
-    @apply text-blue-400 font-normal; /* keywords - softer blue */
+    @apply text-gray-300 font-normal; /* keywords - light gray */
   }
   
   .custom-readme .pl-s, 
   .custom-readme .pl-s1 {
-    @apply text-amber-300; /* strings - warmer tone */
+    @apply text-red-400; /* strings - medium red */
   }
   
   .custom-readme .pl-c1 {
-    @apply text-lime-200; /* constants/numbers - light green */
+    @apply text-red-300; /* constants/numbers - lighter red */
   }
   
   .custom-readme .pl-en {
-    @apply text-yellow-200 font-normal; /* entity names/functions - light yellow */
+    @apply text-gray-200 font-normal; /* entity names/functions - very light gray */
   }
   
   .custom-readme .pl-c {
-    @apply text-green-600 not-italic; /* comments - muted green */
+    @apply text-gray-500 not-italic; /* comments - medium gray */
   }
   
   .custom-readme .pl-smi {
-    @apply text-cyan-300; /* special identifiers - light blue */
+    @apply text-gray-400; /* special identifiers - lighter gray */
   }
   
   .custom-readme .pl-kos {
-    @apply text-gray-300; /* punctuation - lighter gray */
+    @apply text-gray-500; /* punctuation - medium gray */
   }
   
   .custom-readme .pl-v {
-    @apply text-cyan-300; /* variables - light blue */
+    @apply text-gray-400; /* variables - lighter gray */
   }
 
   .custom-readme .pl-e {
-    @apply text-teal-300; /* entities - teal */
+    @apply text-red-200; /* entities - very light red */
   }
   
   /* Position handling for code copy button */
