@@ -14,10 +14,9 @@ export async function generateMetadata({
 
     try {
 
-        const { repoName } = params;
 
         const repos = await getGithubRepos(username);
-        const repo = repos.find(r => r.name === repoName);
+        const repo = repos.find(r => r.name === params.repoName);
 
         if (!repo) {
             return {
@@ -41,19 +40,18 @@ export async function generateMetadata({
 export default async function RepoPage({ params }: { params: { repoName: string } }) {
     const username = 'rhamzthev';
 
-    const { repoName } = params;
 
     try {
         const repos = await getGithubRepos(username);
-        const repo = repos.find(r => r.name === repoName);
+        const repo = repos.find(r => r.name === params.repoName);
 
         if (!repo) {
             return notFound();
         }
 
         const [readmeHtml, languages] = await Promise.all([
-            getRepoReadme(username, repoName),
-            getRepoLanguages(username, repoName)
+            getRepoReadme(username, params.repoName),
+            getRepoLanguages(username, params.repoName)
         ]);
 
         // Apply syntax highlighting to the README HTML
