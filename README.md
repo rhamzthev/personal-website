@@ -164,4 +164,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made by Rhamsez Thevenin 🌹
+Built by Rhamsez Thevenin 🌹
