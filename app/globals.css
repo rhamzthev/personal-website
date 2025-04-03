@@ -465,6 +465,29 @@
   }
 }
 
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skeletonPulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 .animate-slow-pulse {
   animation: slow-pulse 8s ease-in-out infinite;
 }
@@ -478,7 +501,7 @@
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
 .animate-fade-in-delay-1 {
@@ -512,4 +535,22 @@
 
 .animate-centered-bounce {
   animation: centered-bounce 1s infinite;
+}
+
+.animate-content-fade-in {
+  animation: contentFadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.page-transition-fade {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
