@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website - Rhamsez Thevenin
 
-## Getting Started
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.2-blue)](https://www.typescriptlang.org/)
 
-First, run the development server:
+## Description
+
+A modern, responsive personal portfolio website showcasing my work as a full-stack developer. This project features a clean, minimalist design with dynamic content pulled from GitHub, syntax-highlighted project READMEs, and a contact form with email integration.
+
+The site is built with Next.js, React 19, TypeScript, and Tailwind CSS, implementing best practices for performance, accessibility, and responsive design across all device sizes.
+
+![Screenshot 2025-04-03 at 11-29-09 Rhamsez Thevenin Software Developer](https://github.com/user-attachments/assets/2bb982ed-c455-4dd8-a5c7-fb1e22146a51)
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+### Prerequisites
+
+```
+Node.js (v18.18.0 or higher)
+npm or yarn
+GitHub account (for portfolio integration)
+```
+
+### Dependencies
+
+```
+Next.js 15.2.4
+React 19.0.0
+TypeScript 5.7.2
+Tailwind CSS 3.4.1
+Nodemailer 6.10.0
+```
+
+### Installation Steps
 
 ```bash
+# Step 1: Clone the repository
+git clone https://github.com/rhamzthev/personal-website.git
+
+# Step 2: Navigate to the project directory
+cd personal-website
+
+# Step 3: Install dependencies
+npm install
+# or
+yarn install
+
+# Step 4: Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your credentials
+```
+
+## Usage
+
+### Development Server
+
+```bash
+# Run the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# The site will be available at http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build for Production
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Build the project
+npm run build
+# or
+yarn build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Start the production server
+npm start
+# or
+yarn start
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### Core Functionality
+- Dynamic portfolio section that fetches projects directly from GitHub
+- Syntax-highlighted README files for project details
+- Responsive design that works on mobile, tablet, and desktop
+- Contact form with email notifications using Nodemailer
+- SEO optimized with Next.js metadata
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Key Highlights
+- Modern UI with clean animations and transitions
+- GitHub integration showing live stats for projects
+- Dark theme with accent colors and custom design elements
+- Fast page loads with Next.js App Router and server components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies
 
-## Deploy on Vercel
+### Tech Stack
+- **Next.js**: Framework for server-rendered React applications
+- **React**: Frontend library for building user interfaces
+- **TypeScript**: Type-safe JavaScript for better developer experience
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **Nodemailer**: Module for sending emails from Node.js
+- **Highlight.js**: Code syntax highlighting
+- **GitHub API**: Dynamic project fetching
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Project Structure
+```
+project/
+├── app/                # Next.js app router pages and API routes
+│   ├── api/            # API endpoints (contact form)
+│   ├── portfolio/      # Portfolio pages
+│   ├── globals.css     # Global CSS styles
+│   ├── layout.tsx      # Root layout component
+│   └── page.tsx        # Home page
+├── components/         # Reusable React components
+├── lib/                # Utility functions and API clients
+├── public/             # Static assets
+└── ...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Configuration
+
+### Environment Variables
+```
+GITHUB_ACCESS_TOKEN=your_github_token    # For GitHub API access
+SMTP_USER=your_email@example.com         # Email for contact form
+SMTP_PASS=your_email_password            # Password for email
+```
+
+### GitHub Integration
+
+The portfolio section fetches your repositories automatically from GitHub. To customize which repos are displayed:
+
+1. Make sure your repositories have good descriptions and topics
+2. The most recently updated repos will appear first
+3. Add a README.md to each project for the detailed view
+
+## Contributing
+
+This is a personal website, but if you'd like to suggest improvements:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Built by Rhamsez Thevenin 🌹
