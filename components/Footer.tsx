@@ -71,10 +71,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* 3D footer bottom edge effect */}
-      <div className="h-1 w-full bg-gradient-to-r from-red-900/10 via-red-800/30 to-red-900/10"></div>
-      <div className="h-px w-full bg-gradient-to-r from-red-900/10 via-red-700/20 to-red-900/10"></div>
     </footer>
   );
 }
