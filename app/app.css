@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto Serif", ui-serif, Georgia, serif;
+}
+
+html,
+body {
+  @apply bg-[#111111] text-[#eeeeee];
+  min-height: 100vh;
+}
