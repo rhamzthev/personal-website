@@ -7,7 +7,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Roboto Serif', serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -53,13 +53,14 @@ body::before {
 }
 
 #hero-container h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 5rem);
     text-shadow: 0px 0px 0.5rem rgba(255,255,255, 1);
     margin: 2rem;
+    font-family: 'Roboto Serif', serif;
 }
 
 #hero-container h2 {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     color: rgb(192, 192, 192);
     margin: 0;
     text-shadow: 0px 0px 0.5rem rgba(192, 192, 192, 1);
@@ -76,7 +77,7 @@ body::before {
     margin: 8px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0px 0px 0.5rem rgba(255,255,255, 1);
