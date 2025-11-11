@@ -58,7 +58,7 @@ body::before {
 
 #hero-container h1 {
     font-size: clamp(2.5rem, 10vw, 5rem);
-    text-shadow: 0px 0px 0.5rem rgba(255,255,255, 1);
+    text-shadow: 0px 0px 0.5rem rgba(255,255,255, 0.5);
     margin: 2rem;
     font-family: 'Roboto Serif', serif;
 }
@@ -67,7 +67,7 @@ body::before {
     font-size: clamp(1rem, 4vw, 2rem);
     color: rgb(192, 192, 192);
     margin: 0;
-    text-shadow: 0px 0px 0.5rem rgba(192, 192, 192, 1);
+    text-shadow: 0px 0px 0.5rem rgba(192, 192, 192, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 2rem;
 }
@@ -79,11 +79,11 @@ body::before {
     color: #4f2825;
     padding: 12px 24px;
     margin: 8px;
-    border-radius: 8px;
+    border-radius: 60px;
     cursor: pointer;
     font-size: clamp(1rem, 4vw, 2rem);
     transition: all 0.3s ease;
-    box-shadow: 0px 0px 0.5rem rgba(255,255,255, 1);
+    box-shadow: 0px 0px 0.5rem rgba(255,255,255, 0.5);
     text-decoration: none;
     display: inline-block;
     width: auto;
@@ -107,8 +107,8 @@ body::before {
 
 #links a {
     background-color: transparent;
-    color: white;
-    border-radius: 50%;
+    color: #4f2825;
+    border-radius: 60px;
     cursor: pointer;
     font-size: 2rem;
     width: clamp(4rem, 8vw, 5rem);
@@ -117,16 +117,13 @@ body::before {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    text-shadow: 0px 0px 0.5rem rgba(255,255,255, 1);
     text-decoration: none;
+    background-color: white;
+    box-shadow: 0px 0px 0.5rem rgba(255,255,255, 0.5);
 }
 
 #links a:hover {
     transform: translateY(-2px);
-}
-
-.icon {
-    filter: drop-shadow(0px 0px 0.5rem rgba(255,255,255, 1));
 }
 
 #footer {
